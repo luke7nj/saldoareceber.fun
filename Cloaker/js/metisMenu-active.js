@@ -1,1 +1,0 @@
-!function(e){"use strict";jQuery("#menu1").metisMenu()}();
