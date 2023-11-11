@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
 	<meta charset="UTF-8">
-			<title>Códigos Lucrativos</title>
+			<title>Acesso Aprovado!</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
 <title>clapp – threadsnew</title>
@@ -818,42 +818,61 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   <!--------------------- Página de login" --------------------->
   
   
-  <div id="login" style="display: block;">
+<div id="login" style="display: block;">
 
-    <div class="menu">
-      <a>
-        <img decoding="async" src="images/D3cBK8FPWRG5.png">
-      </a>
-      <a>
-          <span class="material-symbols-outlined" style="text-align: right; width: 120%; margin: 15px; font-size: 40px; color: white;">person</span>
-      </a>
+  <div class="menu">
+    <a>
+      <img decoding="async" src="images/D3cBK8FPWRG5.png">
+    </a>
+    <a>
+      <span class="material-symbols-outlined" style="text-align: right; width: 120%; margin: 15px; font-size: 40px; color: white;">person</span>
+    </a>
+  </div>
+  <div style="margin-bottom: 80px;"></div>
+
+  <div style="margin-bottom: 120px;"></div>
+
+  <div class="loginbox">
+    <p class="popup-textL" style="text-align: center; color: #4a4a4a; font-weight: bold; font-size: 18px; padding-top: 20px;">Você acaba de adquirir 1 licença para avaliar roupas em nosso app!</p>
+    <p class="popup-textL" style="text-align: center; color: #28a745; font-size: 15px;"><b>Aproveite, você já ganhou R$830,00!  </b> </p>
+    <p class="popup-textL" style="text-align: center; color: #4a4a4a; font-weight: bold; font-size: 13.8px; padding-top: 20px;">Atinga a meta de 10 avaliações e faça seu primeiro saque! </p>
+    <p class="popup-textL" style="text-align: center; color: #4a4a4a; font-weight: bold; font-size: 13.8px; padding-top: 20px;">Digite o CPF do Cadastro para acessar o APP! </p>
+
+
+
+    <br>
+
+    <div class="input-container" style="margin-bottom:10px; ">
+      <!-- Alteração aqui: mudança de e-mail para cpf e adição do atributo maxlength -->
+      <input for="cpf" type="text" name="cpf" id="cpf" placeholder="Insira seu CPF" oninput="formatarCPF()" maxlength="14">
     </div>
-    <div style="margin-bottom: 80px;"></div>
+    <button class="prosseguir-button" id="prosseguir-button" onclick="verificarCampos()" href="#">Acessar Minha Conta!</button>
 
-    <div style="margin-bottom: 120px;"></div>
-    
-    <div class="loginbox">
-        <p class="popup-textL" style="text-align: center; color: #4a4a4a; font-weight: bold; font-size: 18px; padding-top: 20px;">Bem-vindo(a) ao Aplicativo</p>
-        <p class="popup-textL" style="text-align: center; color: #4a4a4a; font-size: 15px;">Insira seu e-mail para começar!</p>
-        
-        
-        <div class="input-container" style="margin-bottom:10px; ">
-            <input for="email" type="text" name="email" id="email" placeholder="Insira seu e-mail" oninput="validateEmail()">
-        </div>
-        <button class="prosseguir-button" id="prosseguir-button" onclick="verificarCampos()" href="#">Cadastrar</button>
-            
-        <div style="margin-bottom: 10px;"></div>
-            
+    <div style="margin-bottom: 10px;"></div>
 
-        <button class="criar-conta" style="font-weight: bold;" onclick="window.open('https://go.perfectpay.com.br/PPU38CNG9K3?src=Aline-Silva-Ct85', '_blank')">
-             <span style="color: #28a745;"></span> 
-        </button>
-        
-    </div>
-    
-    
+  
 
   </div>
+</div>
+
+<script>
+  // Função para formatar o CPF com pontos e barras
+  function formatarCPF() {
+    var cpfInput = document.getElementById('cpf');
+    var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    if (cpfValue.length > 3) {
+      cpfValue = cpfValue.substring(0, 3) + '.' + cpfValue.substring(3);
+    }
+    if (cpfValue.length > 7) {
+      cpfValue = cpfValue.substring(0, 7) + '.' + cpfValue.substring(7);
+    }
+    if (cpfValue.length > 11) {
+      cpfValue = cpfValue.substring(0, 11) + '-' + cpfValue.substring(11);
+    }
+    cpfInput.value = cpfValue;
+  }
+</script>
+
   
   
   
@@ -868,7 +887,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       </a>
       <div style="width: 45%;" class="buttons-container" href="#" onclick="mostrarPagina('saque')">
         <div class="valor-box">
-          <span id="valor" style="font-family: 'Montserrat', sans-serif;">R$ 0.00</span>
+          <span id="valor" style="font-family: 'Montserrat', sans-serif;">R$ 830.00</span>
         </div>
       </div>
     </div>
@@ -1379,18 +1398,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       </lord-icon>
       
       
-      <span class="popup-textL" style="font-size: 24px; font-weight: bold;">LIMITE DIÁRIO ATINGIDO!</span>
+      <span class="popup-textL" style="font-size: 24px; font-weight: bold;">PARABÉNS!</span>
 
       <div style="margin-bottom: 15px;"></div>
       
-      <p class="popup-textL" style="margin-bottom: 10px; font-size: 18px; font-weight: bold;">Precisa sacar seu saldo de hoje?</p>
+      <p class="popup-textL" style="margin-bottom: 10px; font-size: 18px; font-weight: bold;">Você atingiu o limite diário de avaliações, caso queira avaliar sem limitações, adquira o acesso prioritário por apenas R$9,90!</p>
       
       
-      <button class="desbloquear-buttonL" style="font-weight: bold; background-color: 	#00C45A;" href="#" onclick="mostrarPagina('saque')">SAQUE AGORA</button>
+      <button class="desbloquear-buttonL" style="font-weight: bold; background-color: 	#00C45A;" href="#" onclick="mostrarPagina('saque')">QUERO TER ACESSO PRIORITÁRIO</button>
       
       <div style="margin-bottom: 15px;"></div>
       
-      <p class="popup-textL" style="margin-bottom: 0px;">Ou espere 24 horas,</p>
+      <p class="popup-textL" style="margin-bottom: 0px;">Ou espere 72 horas,</p>
       <p class="popup-textL">para continuar avaliando.</p>
       
       <div id="progress-bar">
@@ -1454,7 +1473,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     
     <div class="valor-box-saque">
         <p style="font-size: 18px; padding-top: 5px; margin-bottom: 5px; padding-left: 13px;">Disponível para saque</p>
-        <span id="valor-saque" style="font-size: 55px; justify-content: left; padding-top: 10px; font-family: 'Montserrat', sans-serif; padding-left: 10px;  letter-spacing: -2px; margin-bottom: 10px;">R$ 0.00</span>
+        <span id="valor-saque" style="font-size: 55px; justify-content: left; padding-top: 10px; font-family: 'Montserrat', sans-serif; padding-left: 10px;  letter-spacing: -2px; margin-bottom: 10px;">R$ 830.00</span>
     </div>
     
 
@@ -1527,14 +1546,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       </lord-icon>
       
 
-      <span class="popup-text" style="font-size: 20px; font-weight: bold;">DESBLOQUEAR SALDO!</span>
+      <span class="popup-text" style="font-size: 20px; font-weight: bold;">OPS, LIMITE DE PIX DIÁRIO EXCEDIDO!</span>
       <div style="margin-bottom: 20px;"></div>
-      <p class="popup-text">Atenção, realize o pagamento da taxa de R$29,90 para desbloquear o seu saldo pendente!</p>
-      <p class="popup-text">Taxa necessária para evitar fraudes e golpes, mas você receberá esse valor de volta a sua conta após o saque!</p>
+      <p class="popup-text">Caso queira sacar qualquer valor sem limitações, por favor garanta o acesso prioritário!</p>
+      <p class="popup-text">realize o pagamento da taxa de R$9,90 para ser o primeiro a receber!</p>
       <div style="margin-bottom: 20px;"></div>
-      <button class="desbloquear-button" style="font-weight: bold;" onclick="window.open('https://go.perfectpay.com.br/PPU38CNG9K3?src=Aline-Silva-Ct85', '_blank')">DESBLOQUEAR SALDO ➔</button>
+      <button class="desbloquear-button" style="font-weight: bold;" onclick="window.open('https://go.perfectpay.com.br/PPU38CNGABD', '_blank')">QUERO SER PRIORIDADE! ➔</button>
       <div style="margin-bottom: 15px;"></div>
-      <button class="popup-button" onclick="closePopup()">X</button>
+      <button class="popup-button" onclick="closePopup()">PREFIRO ESPERAR 72 HORAS</button>
     </div>
 
     <div style="margin-bottom: 20px;"></div>
@@ -1606,7 +1625,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         return '';
     }
     
-    let valor = parseFloat(getCookie('valor')) || 0.0;
+    let valor = parseFloat(getCookie('valor')) || 830.0;
     const valorSpan = document.getElementById('valor');
     const valorSpanSaque = document.getElementById('valor-saque');
     
@@ -2341,19 +2360,68 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       input.value = parteInteira + '.' + centavos;
     }
     
-    function verificarCampos() {
-        var email = document.getElementById("email").value;
-        var emailValido = /\S+@\S+\.\S+/;
+      function verificarCampos() {
+    var cpf = document.getElementById("cpf").value;
     
-        if (email === "") {
-            alert("Insira seu e-mail para logar!");
-        } else if (!emailValido.test(email)) {
-            alert("Insira um e-mail válido!");
-        } else {
-            // Se o campo estiver preenchido e for um e-mail válido, redireciona para a próxima página
-            showLoading();
-        }
+    // Função para validar CPF
+    function validarCPF(cpf) {
+      var cpfLimpo = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+      if (cpfLimpo.length !== 11) {
+        return false; // CPF deve ter exatamente 11 dígitos
+      }
+
+      // Verifica se todos os dígitos são iguais
+      if (/^(\d)\1+$/.test(cpfLimpo)) {
+        return false;
+      }
+
+      // Algoritmo de validação do CPF
+      var soma = 0;
+      var resto;
+
+      for (var i = 1; i <= 9; i++) {
+        soma += parseInt(cpfLimpo.substring(i - 1, i)) * (11 - i);
+      }
+
+      resto = (soma * 10) % 11;
+
+      if (resto === 10 || resto === 11) {
+        resto = 0;
+      }
+
+      if (resto !== parseInt(cpfLimpo.substring(9, 10))) {
+        return false;
+      }
+
+      soma = 0;
+
+      for (var i = 1; i <= 10; i++) {
+        soma += parseInt(cpfLimpo.substring(i - 1, i)) * (12 - i);
+      }
+
+      resto = (soma * 10) % 11;
+
+      if (resto === 10 || resto === 11) {
+        resto = 0;
+      }
+
+      if (resto !== parseInt(cpfLimpo.substring(10, 11))) {
+        return false;
+      }
+
+      return true;
     }
+
+    if (cpf === "") {
+      alert("Insira seu CPF para logar!");
+    } else if (!validarCPF(cpf)) {
+      alert("CPF incorreto, por favor, tente novamente.");
+    } else {
+      // Se o campo estiver preenchido e for um CPF válido, redireciona para a próxima página ou realiza a ação desejada
+      showLoading();
+    }
+  }
     
     
     
