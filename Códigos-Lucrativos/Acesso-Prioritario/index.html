@@ -887,7 +887,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       </a>
       <div style="width: 45%;" class="buttons-container" href="#" onclick="mostrarPagina('saque')">
         <div class="valor-box">
-          <span id="valor" style="font-family: 'Montserrat', sans-serif;">R$ 830.00</span>
+          <span id="valor" style="font-family: 'Montserrat', sans-serif;">R$ 0.00</span>
         </div>
       </div>
     </div>
@@ -1473,7 +1473,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     
     <div class="valor-box-saque">
         <p style="font-size: 18px; padding-top: 5px; margin-bottom: 5px; padding-left: 13px;">Disponível para saque</p>
-        <span id="valor-saque" style="font-size: 55px; justify-content: left; padding-top: 10px; font-family: 'Montserrat', sans-serif; padding-left: 10px;  letter-spacing: -2px; margin-bottom: 10px;">R$ 830.00</span>
+        <span id="valor-saque" style="font-size: 55px; justify-content: left; padding-top: 10px; font-family: 'Montserrat', sans-serif; padding-left: 10px;  letter-spacing: -2px; margin-bottom: 10px;">R$ 0.00</span>
     </div>
     
 
@@ -1625,7 +1625,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         return '';
     }
     
-    let valor = parseFloat(getCookie('valor')) || 830.0;
+    let valor = parseFloat(getCookie('valor')) || 0.0;
     const valorSpan = document.getElementById('valor');
     const valorSpanSaque = document.getElementById('valor-saque');
     
