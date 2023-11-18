@@ -944,102 +944,138 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Apple</span>
         
         </div>
         
+<div>
+	
+    <!-- Áudio -->
+    <audio id="audio" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'enviarCodigo' -->
+    <script>
+        // Adiciona a reprodução de áudio ao clicar no botão "enviarCodigo"
+        let enviarCodigoButton = document.getElementById('B1'); // Seleciona o botão de enviar código
+        let audio = document.getElementById("audio"); // Seleciona o elemento de áudio
+
+        enviarCodigoButton.addEventListener('click', function(){
+            audio.play(); // Reproduz o som ao clicar no botão
+        });
+    </script>
+
+</div>
+
+ 
+
+<!-- Audio no botao -->
+
+
+        <script>
+    let audioButton = document.querySelector('.audio-button');   // <-- Change CSS Class Here
+    audioButton.addEventListener('click', function(){
+        var audio = document.getElementById("audio");
+
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+            // audio.currentTime = 0
+        }
+    });
+</script>
+
+
+
     
     <!--------------------- Anuncio 2 --------------------->
     
     
-    <div class="white-box" id="ad2" style="display: none;">
-            
+   <div class="white-box" id="ad2" style="display: none;">
         <img decoding="async" src="images/BAWHiNpMbcIa.png" style="width: 150px; margin: 0 auto; display: flex; padding-top: 10px;">
-        <p class="wbc" style=" padding-top: 20px;">Clique no botão abaixo para</p>
+        <p class="wbc" style="padding-top: 20px;">Clique no botão abaixo para</p>
         <p class="wbc" style="margin-top: -10px;">gerar o seu código Nike.</p>
-            
         <button id="gerarCodigo2" class="gerarCodigo">Gerar Código</button>
-    
         <div id="codigoGerado2" style="display: none;">
-            <p style="margin-top: 20px; text-align: center; ">Código gerado com sucesso:</p>
+            <p style="margin-top: 20px; text-align: center;">Código gerado com sucesso:</p>
             <p id="codigoAleatorio2" style="font-weight: bold; margin-top: -15px; text-align: center; margin-bottom: -10px; font-size: 25px;"></p>
         </div>
-            
         <form id="pythonGenerator" style="padding-top: 20px;">
             <label for="chatId" style="background-color: #e2e8ef; padding: 10px; border-radius: 12px; text-align: center; width: 100%; margin-bottom: 10px;">Insira o código gerado abaixo:</label>
             <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
-    
-                <!-- Botão de envio -->
+            <!-- Botão de envio -->
             <input type="submit" value="Enviar" class="enviarCodigo" id="B2" onclick="showLoadingB2(); return false;">
         </form>
-            
     </div>
-    
-    
-    <!---- Popup B2 ---->
-        
-        <div class="popup-container" id="popupB2">
-        
-            <script src="js/f75IQSXWqrXA.js"></script>
-            <lord-icon src="https://cdn.lordicon.com/xzksbhzh.json" trigger="loop" delay="1000" colors="primary:#08a88a,secondary:#ebe6ef" style="width:125px;height:125px; display: flex; margin: 0 auto;">
-          </lord-icon>
-          
-          <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
-          <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
-          <span class="popup-text" style="font-size: 20px;">pelo código da Nike</span>
-          
 
-        </div>
-    
+    <!-- Popup B2 -->
+    <div class="popup-container" id="popupB2">
+        <script src="js/f75IQSXWqrXA.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/xzksbhzh.json" trigger="loop" delay="1000" colors="primary:#08a88a,secondary:#ebe6ef" style="width:125px;height:125px; display: flex; margin: 0 auto;"></lord-icon>
+        <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
+        <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
+        <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
+        <span class="popup-text" style="font-size: 20px;">pelo código da Nike</span>
+    </div>
+
+    <!-- Áudio para B2 -->
+    <audio id="audioB2" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B2' -->
+    <script>
+        let enviarCodigoButtonB2 = document.getElementById('B2'); // Seleciona o botão de enviar código B2
+        let audioB2 = document.getElementById("audioB2"); // Seleciona o elemento de áudio para B2
+
+        enviarCodigoButtonB2.addEventListener('click', function(){
+            audioB2.play(); // Reproduz o som ao clicar no botão B2
+        });
+    </script>
     
     <!---------------------- Conteúdo do "p3" ---------------------->
     
-     
-        <div class="white-box" id="ad3" style="display: none;">
-            
-            <img decoding="async" src="images/8WYxQAv6EjoB.png" style="width: 150px; margin: 0 auto; display: flex; padding-top: 10px;">
-            <p class="wbc" style=" padding-top: 20px;">Clique no botão abaixo para</p>
-            <p class="wbc" style="margin-top: -10px;">gerar o seu código Amazon.</p>
-            
-            <button id="gerarCodigo3" class="gerarCodigo">Gerar Código</button>
-    
-            <div id="codigoGerado3" style="display: none;">
-                <p style="margin-top: 20px; text-align: center; ">Código gerado com sucesso:</p>
-                <p id="codigoAleatorio3" style="font-weight: bold; margin-top: -15px; text-align: center; margin-bottom: -10px; font-size: 25px;"></p>
-            </div>
-            
-            <form id="pythonGenerator" style="padding-top: 20px;">
-                <label for="chatId" style="background-color: #e2e8ef; padding: 10px; border-radius: 12px; text-align: center; width: 100%; margin-bottom: 10px;">Insira o código gerado abaixo:</label>
-                <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
-    
-                <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B3" onclick="showLoadingB3(); return false;">
-            </form>
-            
+         <div class="white-box" id="ad3" style="display: none;">
+        <img decoding="async" src="images/8WYxQAv6EjoB.png" style="width: 150px; margin: 0 auto; display: flex; padding-top: 10px;">
+        <p class="wbc" style="padding-top: 20px;">Clique no botão abaixo para</p>
+        <p class="wbc" style="margin-top: -10px;">gerar o seu código Amazon.</p>
+        <button id="gerarCodigo3" class="gerarCodigo">Gerar Código</button>
+        <div id="codigoGerado3" style="display: none;">
+            <p style="margin-top: 20px; text-align: center;">Código gerado com sucesso:</p>
+            <p id="codigoAleatorio3" style="font-weight: bold; margin-top: -15px; text-align: center; margin-bottom: -10px; font-size: 25px;"></p>
         </div>
-        
-        
-        <!---- Popup B3 ---->
-        
-        <div class="popup-container" id="popupB3">
-        
-            <script src="js/f75IQSXWqrXA.js"></script>
-            <lord-icon src="https://cdn.lordicon.com/xzksbhzh.json" trigger="loop" delay="1000" colors="primary:#08a88a,secondary:#ebe6ef" style="width:125px;height:125px; display: flex; margin: 0 auto;">
-          </lord-icon>
-          
-          <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
-          <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
-          <span class="popup-text" style="font-size: 20px;">pelo código da Amazon</span>
-          
+        <form id="pythonGenerator" style="padding-top: 20px;">
+            <label for="chatId" style="background-color: #e2e8ef; padding: 10px; border-radius: 12px; text-align: center; width: 100%; margin-bottom: 10px;">Insira o código gerado abaixo:</label>
+            <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
+            <!-- Botão de envio -->
+            <input type="submit" value="Enviar" class="enviarCodigo" id="B3" onclick="showLoadingB3(); return false;">
+        </form>
+    </div>
 
-        
-        </div>
+    <!-- Popup B3 -->
+    <div class="popup-container" id="popupB3">
+        <script src="js/f75IQSXWqrXA.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/xzksbhzh.json" trigger="loop" delay="1000" colors="primary:#08a88a,secondary:#ebe6ef" style="width:125px;height:125px; display: flex; margin: 0 auto;"></lord-icon>
+        <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
+        <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
+        <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
+        <span class="popup-text" style="font-size: 20px;">pelo código da Amazon</span>
+    </div>
+
+    <!-- Áudio para B3 -->
+    <audio id="audioB3" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B3' -->
+    <script>
+        let enviarCodigoButtonB3 = document.getElementById('B3'); // Seleciona o botão de enviar código B3
+        let audioB3 = document.getElementById("audioB3"); // Seleciona o elemento de áudio para B3
+
+        enviarCodigoButtonB3.addEventListener('click', function(){
+            audioB3.play(); // Reproduz o som ao clicar no botão B3
+        });
+    </script>
+
     
-    
-    <!---------------------- Conteúdo do "p4" ---------------------->
+       <!---------------------- Conteúdo do "p4" ---------------------->
     
      
         <div class="white-box" id="ad4" style="display: none;">
@@ -1076,12 +1112,27 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Magalu</span>
           
 
         
         </div>
+
+
+
+        <!-- Áudio para B4 -->
+    <audio id="audioB4" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B4' -->
+    <script>
+        let enviarCodigoButtonB4 = document.getElementById('B4'); // Seleciona o botão de enviar código B4
+        let audioB4 = document.getElementById("audioB4"); // Seleciona o elemento de áudio para B4
+
+        enviarCodigoButtonB4.addEventListener('click', function(){
+            audioB4.play(); // Reproduz o som ao clicar no botão B4
+        });
+    </script>
     
     
     <!---------------------- Conteúdo do "p5" ---------------------->
@@ -1111,7 +1162,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         </div>
         
         
-        <!---- Popup B4 ---->
+        <!---- Popup B5 ---->
         
         <div class="popup-container" id="popupB5">
         
@@ -1121,13 +1172,26 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Samsung</span>
           
 
         
         </div>
         
+
+        <!-- Áudio para B5 -->
+    <audio id="audioB5" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B5' -->
+    <script>
+        let enviarCodigoButtonB5 = document.getElementById('B5'); // Seleciona o botão de enviar código B5
+        let audioB5 = document.getElementById("audioB5"); // Seleciona o elemento de áudio para B5
+
+        enviarCodigoButtonB5.addEventListener('click', function(){
+            audioB5.play(); // Reproduz o som ao clicar no botão B5
+        });
+    </script>
         
     <!---------------------- Conteúdo do "p6" ---------------------->
     
@@ -1166,12 +1230,26 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Coca-Cola</span>
           
 
         
         </div>    
+
+
+        <!-- Áudio para B6 -->
+    <audio id="audioB6" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B6' -->
+    <script>
+        let enviarCodigoButtonB6 = document.getElementById('B6'); // Seleciona o botão de enviar código B6
+        let audioB6 = document.getElementById("audioB6"); // Seleciona o elemento de áudio para B6
+
+        enviarCodigoButtonB6.addEventListener('click', function(){
+            audioB6.play(); // Reproduz o som ao clicar no botão B6
+        });
+    </script>
         
     <!---------------------- Conteúdo do "p7" ---------------------->
     
@@ -1210,12 +1288,26 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Starbucks</span>
           
 
         
         </div>
+
+
+        <!-- Áudio para B7 -->
+    <audio id="audioB7" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B7' -->
+    <script>
+        let enviarCodigoButtonB7 = document.getElementById('B7'); // Seleciona o botão de enviar código B7
+        let audioB7 = document.getElementById("audioB7"); // Seleciona o elemento de áudio para B7
+
+        enviarCodigoButtonB7.addEventListener('click', function(){
+            audioB7.play(); // Reproduz o som ao clicar no botão B7
+        });
+    </script>
         
     
     <!---------------------- Conteúdo do "p8" ---------------------->
@@ -1255,12 +1347,30 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Visa</span>
           
 
         
         </div>     
+
+
+         <div class="popup-container" id="popupB8">
+        <!-- Seu conteúdo existente aqui -->
+    </div>
+
+    <!-- Áudio para B8 -->
+    <audio id="audioB8" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B8' -->
+    <script>
+        let enviarCodigoButtonB8 = document.getElementById('B8'); // Seleciona o botão de enviar código B8
+        let audioB8 = document.getElementById("audioB8"); // Seleciona o elemento de áudio para B8
+
+        enviarCodigoButtonB8.addEventListener('click', function(){
+            audioB8.play(); // Reproduz o som ao clicar no botão B8
+        });
+    </script>
         
     
     <!---------------------- Conteúdo do "p9" ---------------------->
@@ -1300,12 +1410,29 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da Disney+</span>
           
 
         
         </div>     
+
+
+<!-- Áudio para B9 -->
+    <audio id="audioB9" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B9' -->
+    <script>
+        let enviarCodigoButtonB9 = document.getElementById('B9'); // Seleciona o botão de enviar código B9
+        let audioB9 = document.getElementById("audioB9"); // Seleciona o elemento de áudio para B9
+
+        enviarCodigoButtonB9.addEventListener('click', function(){
+            audioB9.play(); // Reproduz o som ao clicar no botão B9
+        });
+    </script>
+
+
+
     
     <!---------------------- Conteúdo do "p10" ---------------------->
     
@@ -1344,13 +1471,28 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           
           <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
           <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
-          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 83,00</span>
+          <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$ 17,32</span>
           <span class="popup-text" style="font-size: 20px;">pelo código da McDonald's</span>
           
 
         
         </div> 
     
+
+
+    <!-- Áudio para B10 -->
+    <audio id="audioB10" src="http://velhoryco.fun/wp-content/uploads/2023/11/Som-de-dinheiro-Caixa-registradora_lbNrK_VF6DQ.mp3"></audio>
+
+    <!-- Script para reproduzir áudio ao clicar no botão 'B10' -->
+    <script>
+        let enviarCodigoButtonB10 = document.getElementById('B10'); // Seleciona o botão de enviar código B10
+        let audioB10 = document.getElementById("audioB10"); // Seleciona o elemento de áudio para B10
+
+        enviarCodigoButtonB10.addEventListener('click', function(){
+            audioB10.play(); // Reproduz o som ao clicar no botão B10
+        });
+    </script>
+
     
     <!---------------------- Conteúdo do "p11" ---------------------->
     
@@ -1620,7 +1762,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     
     // Função para aumentar o valor
     function aumentarValor() {
-        const incremento = [83.00];
+        const incremento = [17.32];
         const indiceAleatorio = Math.floor(Math.random() * incremento.length);
         const valorIncremento = incremento[indiceAleatorio];
           
@@ -2471,3 +2613,5 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 
 
 </body></html><!-- Page cached by LiteSpeed Cache 5.5 on 2023-11-01 07:36:54 -->
+    
+   
